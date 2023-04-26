@@ -14,8 +14,16 @@
         <p>punkotwanie</p>
         <br>
     </div>
+        {% for post in posts %}
     <div>
-         <strong>pogróbienie</strong>
+        <p> opublikowany: {{post.published_date }}</p>
+        <h2><a href=""> {{ post.title }}</a></h2>
+        <em> {{ post.text|linebreaksbr}}</em>
+    </div>
+        {% endfor %}
+    <div>
+        <br><br>
+        <strong>pogróbienie</strong>
         <br>
         <a href="https://google.pl"> strona google </a>
     </div>
